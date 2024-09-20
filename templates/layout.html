@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD de Empregados</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('home') }}">Home</a></li>
+                <li><a href="{{ url_for('create') }}">Adicionar Novo Empregado</a></li>
+                <li><a href="{{ url_for('find_data_list') }}">Lista de Empregados</a></li>
+            </ul>
+        </nav>
+        {% block content %}{% endblock %}
+    </div>
+</body>
+<footer>
+    <div class="footer-container">
+        <div class="footer-left">
+            <h3>Bruno Carmo</h3>
+            <p>Conecte-se conosco nas redes sociais:</p>
+            <div class="social-icons">
+                <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+        <div class="footer-center">
+            <h3>Contato</h3>
+            <p><i class="fas fa-map-marker-alt"></i> Endereço: Rua Principal, 123, Cidade, País</p>
+            <p><i class="fas fa-phone-alt"></i> Telefone: (12) 3456-7890</p>
+            <p><i class="fas fa-envelope"></i> Email: info@empresa.com</p>
+        </div>
+        <!-- <div class="footer-right">
+            <h3>Links Rápidos</h3>
+            <ul>
+                <li><a href="{{ url_for('home') }}">Home</a></li>
+                <li><a href="{{ url_for('create') }}">Adicionar Novo Empregado</a></li>
+                <li><a href="{{ url_for('find_data_list') }}">Lista de Empregados</a></li>
+                
+            </ul>
+        </div> -->
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2024 Bruno Carmo. Todos os direitos reservados.</p>
+    </div>
+</footer>
+
+</html>

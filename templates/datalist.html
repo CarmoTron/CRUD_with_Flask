@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+{% block content %}
+<h1>Lista de Empregados</h1>
+<a href="{{ url_for('create') }}">Adicionar Novo Empregado</a>
+<ul>
+    {% for empregado in empregados %}
+    <li>
+        <div class="info">{{ empregado.nome }} - {{ empregado.idade }} - {{ empregado.posicao }}</div>
+        <div class="actions">
+            <a href="{{ url_for('update', id=empregado.id) }}">Editar</a>
+            <a href="{{ url_for('delete', id=empregado.id) }}">Eliminar</a>
+            <a href="{{ url_for('find_single_empregado', id=empregado.id) }}">Detalhes</a>
+        </div>
+    </li>
+    {% endfor %}
+</ul>
+{% endblock %}

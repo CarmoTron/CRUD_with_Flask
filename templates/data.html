@@ -1,0 +1,12 @@
+{% extends "layout.html" %}
+{% block content %}
+<h3>ID</h3>
+<p>{{ empregado.id_empregado }}</p><hr>
+<h3>Nome</h3>
+<p>{{ empregado.nome }}</p><hr>
+<h3>Idade</h3>
+<p>{{ empregado.idade }}</p><hr>
+<h3>Posição</h3>
+<p>{{ empregado.posicao }}</p><hr>
+<a href="{{ url_for('find_data_list') }}">Voltar</a>
+{% endblock %}

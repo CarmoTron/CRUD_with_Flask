@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+{% block content %}
+<h1>Atualizar Empregado</h1>
+<form action="" method="POST">
+    <p>
+        Nome: <input type="text" name="nome" value="{{ empregado.nome }}" required />
+    </p>
+    <p>
+        Idade: <input type="number" name="idade" value="{{ empregado.idade }}" required />
+    </p>
+    <p>
+        Posição: <input type="text" name="posicao" value="{{ empregado.posicao }}" required />
+    </p>
+    <p>
+        <input type="submit" value="Atualizar" />
+    </p>
+</form>
+{% endblock %}

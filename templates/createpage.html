@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+{% block content %}
+<h1>Adicionar Novo Empregado</h1>
+<form action="" method="POST">
+    <p>
+        ID Empregado: <input type="number" name="id_empregado" required />
+    </p>
+    <p>
+        Nome: <input type="text" name="nome" required />
+    </p>
+    <p>
+        Idade: <input type="number" name="idade" required />
+    </p>
+    <p>
+        Posição: <input type="text" name="posicao" required />
+    </p>
+    <p>
+        <input type="submit" value="Adicionar" />
+    </p>
+</form>
+{% endblock %}
